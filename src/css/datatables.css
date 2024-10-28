@@ -1,0 +1,47 @@
+﻿
+/* 筆數起迄&合計 */
+.dataTables_info {
+    padding-top: 4px !important;
+    float: left;
+}
+
+/*
+.dataTables_wrapper {
+    padding: 0;
+}
+
+    .dataTables_wrapper .dataTables_length, .dataTables_info, .toolbar {
+        float: left;
+    }
+*/
+
+/* change sorting icon to character see: https://datatables.net/blog/2014-06-06 */
+/*
+.dataTable th {
+    position: relative;
+    background-image: none !important; 
+}
+*/
+
+/* === sorting icon === */
+.dataTable .sorting:before,
+.dataTable .sorting_asc:before,
+.dataTable .sorting_desc:before,
+.dataTable .sorting_asc_disabled:before,
+.dataTable .sorting_desc_disabled:before {
+    right: 1em;
+    content: '\e902' !important;
+    font-family: 'icomoon' !important;
+	font-weight: lighter !important;
+}
+
+.dataTable .sorting:after,
+.dataTable .sorting_asc:after,
+.dataTable .sorting_desc:after,
+.dataTable .sorting_asc_disabled:after,
+.dataTable .sorting_desc_disabled:after {
+    right: 0.5em;
+    content: '\e901' !important;
+    font-family: 'icomoon' !important;
+	font-weight: lighter !important;
+}

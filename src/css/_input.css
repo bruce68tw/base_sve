@@ -1,0 +1,66 @@
+﻿/* input & label & tail */
+
+/*=== input ===*/
+.xi-label, .xi-input, .xi-read {
+    margin: 4px 0;
+    min-height: 43px;
+    vertical-align: middle;
+}
+.xi-label, .xi-read {
+    padding-top: 8px;
+}
+.xi-label {
+    text-align: right;
+}
+
+/* vertical */
+.xg-y .xi-label {
+    padding: 14px 0 0 0;
+    border: none;
+    text-align: left;
+}
+
+/* group input 右邊border會變直線 
+input.xg-group-input {
+    width: 100px !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+}
+*/
+
+@media (max-width:768px) {
+    /* 小螢幕輸入欄位高度縮小 */
+    .xi-label, .xi-input, .xi-read {
+        min-height: 32px !important;
+    }
+    
+    /*
+    .xi-input {
+        padding-top: 0;
+    }
+    */
+
+    .xi-label {
+        text-align: left;
+    }
+}
+
+/*=== label ===
+.xi-label {
+    padding: 14px 5px 0 15px;
+    border: none;
+    text-align: right;
+}
+*/
+
+/* span label */
+.xg-span-label {
+    margin: 3px 3px;
+}
+
+/*=== tail ===*/
+.xg-tail {
+    padding: 14px 5px 0 0;
+    border: none;
+    text-align: left;
+}

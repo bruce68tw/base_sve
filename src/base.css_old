@@ -1,0 +1,1232 @@
+﻿
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* === btn === */
+.btn {
+    padding: 4px 8px;
+    margin-right: 3px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 4px;
+    /*color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;*/
+}
+
+/* table button with link style */
+.btn-link {
+    padding: 0 !important;
+    text-decoration: none !important;
+}
+
+.table-condensed {
+    font-size: 14px;
+}
+
+/* change height, 38 -> 36 */
+.form-control, select.form-control {
+    /*font-size: 16px !important;*/
+    height: 36px !important;
+    /*padding: 3px 6px !important;*/
+}
+
+    /*
+    .form-control:disabled, .form-control[readonly], .form-select:disabled, .form-select[readonly] {
+        background: #eee !important;
+    }
+    */
+
+    /* 移除 tail error icon */
+    .form-control.is-invalid {
+        background-image: none !important;
+    }
+    /* 移除 tail error icon but keep arrow */
+    .form-select.is-invalid {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;        
+    }
+
+textarea.form-control {
+    height: auto !important;
+}
+
+/* modal */
+/* background-color 會覆蓋 border-radius 效果 */
+/*
+.modal-header {
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #eee; 
+}
+*/
+
+/* === placeholder color === */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    /*color: lightgrey !important;*/
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgrey !important;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgrey !important;
+}
+
+/* fix bootstrap 5 */
+.table > :not(:first-child) {
+    border-top: none !important;
+}
+
+.input-group > .form-control,
+.input-group > .form-select {
+    width: 100% !important;    
+}
+
+.modal{
+    display:block;
+}
+
+/* 筆數起迄&合計 */
+.dataTables_info {
+    padding-top: 4px !important;
+    float: left;
+}
+
+/*
+.dataTables_wrapper {
+    padding: 0;
+}
+
+    .dataTables_wrapper .dataTables_length, .dataTables_info, .toolbar {
+        float: left;
+    }
+*/
+
+/* change sorting icon to character see: https://datatables.net/blog/2014-06-06 */
+/*
+.dataTable th {
+    position: relative;
+    background-image: none !important; 
+}
+*/
+
+/* === sorting icon === */
+.dataTable .sorting:before,
+.dataTable .sorting_asc:before,
+.dataTable .sorting_desc:before,
+.dataTable .sorting_asc_disabled:before,
+.dataTable .sorting_desc_disabled:before {
+    right: 1em;
+    content: '\e902' !important;
+    font-family: 'icomoon' !important;
+	font-weight: lighter !important;
+}
+
+.dataTable .sorting:after,
+.dataTable .sorting_asc:after,
+.dataTable .sorting_desc:after,
+.dataTable .sorting_asc_disabled:after,
+.dataTable .sorting_desc_disabled:after {
+    right: 0.5em;
+    content: '\e901' !important;
+    font-family: 'icomoon' !important;
+	font-weight: lighter !important;
+}
+@charset "utf-8";
+
+/* html font-size 會影響 .rem 大小 */
+html, body {
+    /*padding-top: 50px;*/
+    /*padding-bottom: 20px;*/
+    height: 100%;
+}
+
+/*
+body, label {
+    color: #424243;
+}
+*/
+
+/* space in button & icon */
+.btn > i {
+    padding-left: 3px;
+}
+
+/* icomoon spinner */
+@keyframes anim-rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+.spinner {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 2em;
+    animation: anim-rotate 2s infinite steps(12);
+}
+
+/*
+.xg-hide {
+    display: none;
+}
+
+.xg-inblock {
+    display: inline-block;
+}
+*/
+
+/* required */
+.xg-require {
+    color: red;
+    font-weight: bold;
+}
+
+/* === color === */
+.xg-green {
+    color: green;
+}
+.xg-red {
+    color: red;
+}
+
+.xg-w100 {
+    width: 100px !important;
+}
+.xg-w150 {
+    width: 150px !important;
+}
+.xg-w200 {
+    width: 200px !important;
+}
+
+/* === position === */
+/*
+.xg-left {
+    text-align: left;
+}
+.xg-center {
+    text-align: center;
+}
+.xg-right {
+    text-align: right;
+}
+
+.xg-h10 {
+    height: 10px !important;
+}
+*/
+
+
+@media (min-width:576px) {
+    .xg-sm-hide {
+        display: none !important;
+    }
+}
+
+@media (max-width:768px) {
+    .xg-hide-rwd {
+        display: none !important;
+    }
+}
+/* button: xgb- */
+
+/* ?典 form鋆⊿??button */
+.xgb-small {
+    padding: 2px 5px;
+}
+
+/* ???, 蝛箇? basic button 
+.xg-fun-btn {    
+}
+*/
+
+/* look like link */
+.xgb-link {
+    background: none !important;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    /*border is optional*/
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+.xgb-box {
+    /*padding: 3px 0 3px 0;*/
+    margin: 3px 0 3px 0;
+    display: flex;  /* ????撠?*/
+}
+
+/* ???, 蝛箇? basic button */
+/* size and gray 
+.xg-btn {
+    padding: 4px 8px;
+    margin-right: 3px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.xg-btn-size {
+    padding: 4px 8px;
+    margin-right: 3px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 4px;
+}
+
+.xgb-gray {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+*/
+
+/* table row button 
+.xg-row-btn {
+}
+*/
+
+/* jquery validate error label */
+span.error {
+    color: red;
+    margin-bottom: 0 !important;
+}
+
+.xg-err {
+    /*border: #5b48e5;
+    border-style: solid;
+    border-width: thin;*/
+    border: 1px solid #FF8B55 !important;
+    /*border-style: solid !important;
+    border-width: thin !important;*/
+}
+
+/*  */
+.xg-errlab {
+    text-align: left;
+    font-size: 14px;
+    font-weight: lighter;
+    color: red;
+    display: none;
+}
+
+/* (+)?賊?豢??? 
+  1.??xg-error2 ?賊??error label 閬＊蝷?
+  2.??xg-error2box 鋆⊿??error label 閬＊蝷?
+.xg-error + .xg-errorlabel, .xg-errorbox + .xg-errorlabel {
+    display: block !important;
+}
+*/
+
+/* ??xg-error2box 鋆⊿??input 閬＊蝷粹隤斗? */
+/*.xg-errorbox > input,
+.xg-errorbox > button, .xg-errorbox div.xg-icheck {
+    border: 1px solid #FF8B55 !important;
+}
+*/
+
+/* toolbar */
+
+/* find form toolbar */
+.xg-find-tbar {
+    padding-top: 8px;
+}
+
+/* find form, use $.slideToggle() */
+.xg-find-form {
+    display: none;
+    padding: 10px 0 10px 0;
+}
+
+    /* init to open status, toggle will add open class */
+    .xg-find-form.open {
+        /*display: none;*/
+        padding: 10px 0 10px 0;
+    }
+
+/*
+.jtk-demo-main {
+    background-color: transparent;
+    font-family: Arial,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width:1500px;
+    position: relative;
+    margin-top:98px;
+}
+
+.jtk-demo-canvas {
+    margin-left: 160px;
+    height:750px;
+    max-height:700px;
+    border:1px solid #CCC;
+    background-color:white;
+}
+
+.canvas-wide {
+    margin-left:0;
+}
+*/
+
+.xf-line-label {
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+    background-color: white;
+    opacity: 0.8;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    /*border: 1px solid #346789;*/
+    cursor: pointer;
+}
+
+
+.zz_demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+
+.xf-node {
+    padding: 12px 18px 12px 12px;
+    position: absolute;
+    z-index: 4;
+    border: 1px solid #2e6f9a;
+    box-shadow: 2px 2px 19px #e0e0e0;
+    -o-box-shadow: 2px 2px 19px #e0e0e0;
+    -webkit-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    opacity: 0.8;
+    cursor: move;
+    background-color: white;
+    font-size: 13px;
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+}
+
+.xf-node:hover {
+    background-color: #5c96bc;
+    color: white;
+}
+
+.xf-node.xf-start-node {
+    border-color: red;
+}
+.xf-node.xf-end-node {
+    border-color: red;
+    border-radius: 50%;
+    padding: 12px;
+    width: 45px;
+    height: 45px;
+}
+    .xf-node.xf-end-node .xd-name {
+        margin-left: -2px !important;
+    }
+    .xf-node.xf-end-node .xf-ep {
+        display: none !important;
+    }
+
+/*
+.xf-node.xf-auto-node {
+    border: 3px solid gray;
+    border-radius: 0;
+}
+*/
+
+/*
+.aLabel {
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+}
+.aLabel {
+    background-color: white;
+    opacity: 0.8;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    border: 1px solid #346789;
+    cursor: pointer;
+}
+*/
+
+/*
+.xf-line-label.jtk-hover, .jtk-source-hover, .jtk-target-hover {
+    background-color: #1e8151;
+    color: white;
+}
+*/
+
+/* end point, class name fix to xf-ep !! */
+.xf-ep {
+    position: absolute;
+    bottom: 37%;
+    right: 5px;
+    width: 1em;
+    height: 1em;
+    background-color: orange;
+    cursor: pointer;
+    box-shadow: 0 0 2px black;
+    -webkit-transition: -webkit-box-shadow 0.25s ease-in;
+        -moz-transition: -moz-box-shadow 0.25s ease-in;
+        transition: box-shadow 0.25s ease-in;
+}
+
+.xf-ep:hover {
+    box-shadow: 0 0 6px black;
+}
+
+.zz_statemachine-demo .jtk-endpoint {
+    z-index: 3;
+}
+
+/* no used
+#opened {
+    left: 10em;
+    top: 5em;
+}
+
+#phone1 {
+    left: 35em;
+    top: 12em;
+    width: 7em;
+}
+
+#inperson {
+    left: 12em;
+    top: 23em;
+}
+
+#phone2 {
+    left: 28em;
+    top: 24em;
+}
+
+#rejected {
+    left: 10em;
+    top: 35em;
+}
+*/
+
+.dragHover {
+    border: 2px solid orange;
+}
+
+path, .jtk-endpoint { cursor:pointer; }
+
+/* context menu */
+/* The whole thing */
+.xf-menu {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 5px;
+    padding: 0;
+    min-width: 100px;
+}
+
+/* Each of the items in the list */
+.xf-menu li {
+    padding: 6px 15px;
+    cursor: pointer;
+    list-style-type: none;
+    transition: all .3s ease;
+}
+
+.xf-menu li:hover {
+    background-color: #DEF;
+}
+
+/**
+ * checkbox, radio, use pure css, no js
+ * span: border, after: checked sign
+ */
+.xi-check {
+    display: inline-block;
+    position: relative;
+    margin-top: 8px;
+    padding: 0 10px 0 25px; /* for label pos */
+}
+    /*
+    .xi-check.xg-in-dt, .xg-radio.xg-in-dt {
+        margin-top: 10px;
+        padding-left: 25px;
+    }
+    */
+
+/* hide original input element */
+.xi-check > input {
+    display: none;
+}
+
+/* span: square/round checked sign */
+.xi-check > span {	
+	cursor: pointer;
+    position: absolute;
+	padding: 0;
+    top: 0;
+    left: 0;
+
+    content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 19px;
+	height: 19px;
+	margin-right: 0px;
+}
+
+    /* for datatable checkbox, no label */
+    .xi-check.xg-no-label > span {
+        top: -6px !important;
+        left: 0 !important;
+    }
+
+/* radio sign box */
+.xi-rspan {
+    border-radius: 50% !important;
+}
+
+/*
+.xi-check.xd-center, .xg-radio.xd-center {	
+    padding:0;
+}
+*/
+
+/* 在 datatable裡面有時會置中 
+.xi-check.xd-center > span, .xg-radio.xd-center > span {	
+	cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    padding:0;
+    margin:0;
+}
+*/
+
+    /* checkbox方框 style (span:before) 
+.xi-check > span:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 19px;
+	height: 19px;
+	background: white;
+    border: 1px solid #ccc;
+	margin-right: 0px;
+}
+*/
+
+/* span after: checked sign */
+.xi-check > input:checked + .xi-cspan:after {
+	content: '';
+	position: absolute;
+    height: 13px;
+    width: 7px;
+    border-width: 0 2px 2px 0; /* 設定checked sign 寬度 */
+	transform: rotate(45deg);
+	top: 0px;
+	left: 5px;
+}
+
+.xi-check > input:checked + .xi-rspan:after {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+}   
+
+/* disabled style */
+.xi-check > input:disabled + span {
+    cursor: auto;
+}
+
+
+/* re-check ?? */
+/* datatable header delete all checkbox */
+.xi-check.xg-delete-all {
+    padding-left: 15px;
+}
+
+/* re-check ?? */
+.xg-delete-all-btn {
+    margin-top: -2px;
+    padding: 2px 3px 2px 0;
+    background: red;
+}
+
+/* match datepicker.css .date setting, for keep input width same to date at query form */
+.xg-date-w {
+    width: 180px !important;
+}
+
+/* file url */
+.xi-file-box div a:first-child {
+    color: blue;
+}
+
+/* note ?? */
+.xi-file-box div:nth-child(3) {
+    color: red;
+    font-size: 12px;
+}
+
+.xi-file {
+    margin-bottom: 0 !important;
+}
+/* input & label & tail */
+
+/*=== input ===*/
+.xi-label, .xi-input, .xi-read {
+    margin: 4px 0;
+    min-height: 43px;
+    vertical-align: middle;
+}
+.xi-label, .xi-read {
+    padding-top: 8px;
+}
+.xi-label {
+    text-align: right;
+}
+
+/* vertical */
+.xg-y .xi-label {
+    padding: 14px 0 0 0;
+    border: none;
+    text-align: left;
+}
+
+/* group input 右邊border會變直線 
+input.xg-group-input {
+    width: 100px !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+}
+*/
+
+@media (max-width:768px) {
+    /* 小螢幕輸入欄位高度縮小 */
+    .xi-label, .xi-input, .xi-read {
+        min-height: 32px !important;
+    }
+    
+    /*
+    .xi-input {
+        padding-top: 0;
+    }
+    */
+
+    .xi-label {
+        text-align: left;
+    }
+}
+
+/*=== label ===
+.xi-label {
+    padding: 14px 5px 0 15px;
+    border: none;
+    text-align: right;
+}
+*/
+
+/* span label */
+.xg-span-label {
+    margin: 3px 3px;
+}
+
+/*=== tail ===*/
+.xg-tail {
+    padding: 14px 5px 0 0;
+    border: none;
+    text-align: left;
+}
+
+/* number input */
+/* hide stepper: Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* hide stepper: Firefox */
+input[type=number] {
+    text-align: right;
+    -moz-appearance: textfield;
+}
+/* 顏色由外層控制 */
+.xg-leftmenu {
+    padding: 0;
+    margin-left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 1000;
+    /*
+    min-width: 250px;
+    max-width: 300px;
+    font-size: 14px;
+    margin: 0;
+    background: #FFFFFF;
+    */
+}
+
+.xg-leftmenu.xg-off {
+    transition: 0.5s;
+    margin-left: -250px;
+}
+
+    /* menu item */
+    .xg-leftmenu li {
+        line-height: 42px;
+    }
+
+    /* 文字 */
+    .xg-leftmenu a {
+        display: block; /* for 選取 wight 100% */
+        text-decoration: none !important;
+        padding-left: 18px;
+    }
+
+    .xg-leftmenu a:hover {
+        cursor: pointer;
+        text-decoration: none; /* remove underline */
+    }
+
+.xg-leftmenu a:hover i {
+}
+
+/* icon */
+.xg-leftmenu i {
+    /*margin-right: 10px;
+    padding-left: 12px;*/
+    width: 25px;    /* 讓文字對齊 */
+}
+
+.xg-leftmenu .xg-arrow:before {
+    float: right;
+    margin-right: 20px;
+    font-family: 'icomoon';
+    content: "\f107"; /* down arrow */
+    font-size: 13px;    /* 控制大小 */
+}
+
+.xg-leftmenu .xg-arrow.xg-on:before {
+    content: "\f106";   /* up arrow */
+}
+
+/* === 子功能表 === */
+.xg-leftmenu-sub {
+    padding: 0;
+    list-style: none;
+    /*
+    transition: 0.5s;
+    -moz-padding-start: 0;
+    -webkit-padding-start: 0;
+    -khtml-padding-start: 0;
+    -o-padding-start: 0;
+    padding-start: 0;
+    background: #DAF8FF;
+    */
+}
+
+/*
+.xg-leftmenu-sub.collapse {
+    transition: 0.5s;
+}
+*/
+
+.xg-leftmenu-sub li {
+    border: none;
+}
+
+/* sub menu text */
+.xg-leftmenu-sub a {
+    padding-left: 18px;
+}
+/* xg-modal, 縮寫 xgm- */
+
+/* edit modal */
+.xg-modal .modal-header {
+    padding: 12px;
+    border-bottom: none;
+    /*background: #f8f9fa;*/
+}
+
+.xg-modal .modal-title {
+    /*font-size: 16px;*/
+}
+
+.xg-modal .modal-body {
+    /* padding 寫成一行會出現水平捲軸 ?? */
+    /* padding: 10px 0 20px 0; */
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.xg-modal .modal-footer {
+    /*margin-top: 20px;*/
+    border-top: none;
+}
+
+.xg-modal .btn-close {
+    font-size: 12px;
+}
+
+.xg-pager {
+    text-align: start;
+}
+
+/* right page buttons */
+.xg-pager nav {
+    float: right;
+}
+
+.xg-pager select, .xg-pager nav {
+    width: auto; 
+    display: inline-block;
+}
+
+@media (max-width:768px) {
+    .xg-pager {
+        text-align: center !important;
+    }
+    .xg-pager label {
+        display: none !important;
+    }
+    .xg-pager nav {
+        float: none !important;
+    }    
+}
+
+/* prog path, razor 只支援 inline style */
+.xg-prog-path {
+    height: 20px;
+    font-style: italic;
+}
+
+    .xg-prog-path ul {
+        padding: 10px 0 10px 10px;
+        font-size: 15px;
+        color: #a5a5a5;
+        background: none;
+    }
+
+@media (max-width:768px) {
+    .xg-prog-path {
+        font-style: italic;
+    }
+}
+
+.xg-prog {
+    /*padding: 15px;*/
+    /*
+    margin: 5px 15px 10px 15px;
+    border: 1px solid #ddd !important;
+    border-radius: 4px;
+    */
+}
+
+@media (max-width:768px) {
+    .xg-prog {
+        /*border: none !important;*/
+        padding: 0;
+    }
+}
+/* xg-table, 縮寫 xgt- */ 
+
+/* for file url */
+.xgt-edit td {
+    border-top: none;
+    border-bottom: none;
+}
+
+/* include: read, edit table */
+.xg-table {
+    border-collapse: separate !important;
+    width: 100% !important;
+    border-width: 1px 0 0 1px !important;
+    border-style: solid !important;
+    /*margin-top: 0 !important;*/
+}
+
+    .xg-table th, .xg-table td {
+        font-weight: normal !important;
+        border-width: 0 1px 1px 0 !important;
+        border-style: solid !important;
+        vertical-align: middle !important;
+        text-align: center !important;
+        padding: 0.75rem; /* front web */
+    }
+
+    .xg-table th {
+        padding-right: 12px !important; /*排序icon造成文字左移*/
+    }
+
+    /*
+    .xg-table tr:hover {
+        background: #F6F6F6;
+    }
+    */
+    
+    .xg-table.xgt-no-hline {
+        border-width: 1px 0 1px 1px !important;
+    }
+
+        .xg-table.xgt-no-hline td {
+            border-width: 0 1px 0 0 !important;
+        }
+
+    .xg-table .xi-check > span {
+        top: -15px !important;
+        left: 8px !important;
+    }
+
+/*
+.xg-table th .xi-check {
+    top: -6px !important;
+    left: -3px !important;
+}
+.xg-table tbody .xi-check {
+    top: -8px !important;
+}
+*/
+
+/* table v scroll */
+.xgt-vscroll {
+    border-width: 1px 0 1px 1px !important;
+}
+
+.xgt-vscroll tbody {
+    display: block;
+    overflow-y: scroll;
+}
+
+.xgt-vscroll tr {
+  display:flex;
+}
+
+.xg-table tr input {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+.xg-table tr select {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
+
+/* tr 必須設定 tabindex="0" focus才有效 
+.xgt-focus tbody tr:focus {
+    background: gray;
+}
+*/
+
+@media (max-width:768px) {
+    .xg-table.xg-rwd {
+        background: #fff;
+        overflow: hidden;
+        border: none !important;
+    }
+
+        /*
+        .xg-table tr:nth-of-type(2n) {
+            background: #eee;
+        }
+        .xg-table th, .xg-table td {
+            margin: 0.5em 1em;
+        }
+
+    .xg-table {
+        min-width: 100%;
+    }
+        */
+
+    .xg-table2 tbody {
+        padding-top: 3px;
+    }
+
+        .xg-table.xg-rwd th {
+            display: none;
+        }
+
+        .xg-table.xg-rwd td {
+            text-align: left !important;
+            display: block;
+            border: none !important;
+            padding: 5px !important;
+        }
+
+            /* tr 無法劃線, 必須使用 td */
+            .xg-table.xg-rwd td:first-child {
+                padding-top: 10px !important;
+                border-top: 1px solid lightgray !important;
+            }
+            .xg-table.xg-rwd td:last-child {
+                padding-bottom: 10px !important;
+            }
+
+            .xg-table.xg-rwd td:before {
+                content: attr(data-th);
+                font-weight: bold;
+                /*width: 6.5em;*/
+                display: inline-block;
+                /*color: darkblue;*/
+                text-align: left !important;
+            }
+
+        /*
+        .xg-table th, .xg-table td {
+            text-align: left;
+        }
+
+            .xg-table th, .xg-table td:before {
+                color: #D20B2A;
+                font-weight: bold;
+            }
+        */
+}
+
+/* RWD table 
+table, th, td
+  border: 1px solid #aaa
+  border-collapse: collapse
+  padding: 3px 5px
+  
+table
+  width: 95%
+  margin: 1em auto
+th
+  background: #e6f9ff
+tr:nth-child(even)
+  background: rgba(#6cffd1,.2)
+  
+@media only screen and (max-width:768px)
+  thead
+    display: none
+  td
+    display: block
+    padding: .3rem .5rem
+  td:before
+    content: attr(data-title)
+    display: inline-block
+    width: auto
+    min-width: 20%
+    font-weight: 900
+    padding-right: 1rem
+*/    
+    
+
+/* bootstrap alert */
+#xgAlert {
+    position: fixed; 
+    top: 3px; 
+    right: 3px; 
+    width: auto;
+    z-index: 9999; 
+    border-radius: 5px
+}
+#xgAlert .btn-close {
+    font-size: 12px;
+}
+
+/*
+#xgWait {
+    display: none;  
+    position: fixed;
+    top: 33%;
+    left: 50%;
+}
+*/
+
+/* xg-msg for both xgMsg & xgAns */
+.xg-msg .modal-dialog {
+    min-width: 280px;
+    max-width: 480px;
+}
+.xg-msg .modal-header {
+    /*padding: 15px;
+    border-bottom: none;
+    background: none !important;
+    */
+}
+.xg-msg .modal-body {
+    padding-top: 25px !important;
+    padding-bottom: 0px !important;
+}
+/*
+.xg-msg .modal-footer {
+    padding: 10px;
+    border-top: none;
+}
+.xg-msg .btn-close {
+    font-size: 12px;
+}
+*/
+
+/*
+#xgArea .modal-dialog {
+    width: 480px;
+}
+*/
+
+#xgImage .modal-body {
+    padding: 3px;
+}
+#xgImage .modal-footer {
+    border: none;
+    padding: 5px;
+}
+#xgImage img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+/* When the body has the wait class, we turn
+   the scrollbar off with overflow:hidden */
+body.xg-show-wait {
+    overflow: hidden;
+}
+
+/* Anytime the body has the wait class, our
+   modal element will be visible */
+body.xg-show-wait .xg-wait {
+    display: block;
+}
+
+.xg-wait {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* 放置在最上层 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* toolbar */
+
+/* row list toolbar */
+.xg-list-tbar {
+    padding: 3px 0 3px 0;
+}

@@ -1,0 +1,26 @@
+﻿
+.xg-pager {
+    text-align: start;
+}
+
+/* right page buttons */
+.xg-pager nav {
+    float: right;
+}
+
+.xg-pager select, .xg-pager nav {
+    width: auto; 
+    display: inline-block;
+}
+
+@media (max-width:768px) {
+    .xg-pager {
+        text-align: center !important;
+    }
+    .xg-pager label {
+        display: none !important;
+    }
+    .xg-pager nav {
+        float: none !important;
+    }    
+}

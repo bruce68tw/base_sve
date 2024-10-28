@@ -1,0 +1,91 @@
+﻿
+/* bootstrap alert */
+#xgAlert {
+    position: fixed; 
+    top: 3px; 
+    right: 3px; 
+    width: auto;
+    z-index: 9999; 
+    border-radius: 5px
+}
+#xgAlert .btn-close {
+    font-size: 12px;
+}
+
+/*
+#xgWait {
+    display: none;  
+    position: fixed;
+    top: 33%;
+    left: 50%;
+}
+*/
+
+/* xg-msg for both xgMsg & xgAns */
+.xg-msg .modal-dialog {
+    min-width: 280px;
+    max-width: 480px;
+}
+.xg-msg .modal-header {
+    /*padding: 15px;
+    border-bottom: none;
+    background: none !important;
+    */
+}
+.xg-msg .modal-body {
+    padding-top: 25px !important;
+    padding-bottom: 0px !important;
+}
+/*
+.xg-msg .modal-footer {
+    padding: 10px;
+    border-top: none;
+}
+.xg-msg .btn-close {
+    font-size: 12px;
+}
+*/
+
+/*
+#xgArea .modal-dialog {
+    width: 480px;
+}
+*/
+
+#xgImage .modal-body {
+    padding: 3px;
+}
+#xgImage .modal-footer {
+    border: none;
+    padding: 5px;
+}
+#xgImage img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+/* When the body has the wait class, we turn
+   the scrollbar off with overflow:hidden */
+body.xg-show-wait {
+    overflow: hidden;
+}
+
+/* Anytime the body has the wait class, our
+   modal element will be visible */
+body.xg-show-wait .xg-wait {
+    display: block;
+}
+
+.xg-wait {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* 放置在最上层 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

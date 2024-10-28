@@ -1,0 +1,64 @@
+
+/*
+.xg-hide {
+    display: none;
+}
+
+.xg-inblock {
+    display: inline-block;
+}
+*/
+
+/* required */
+.xg-require {
+    color: red;
+    font-weight: bold;
+}
+
+/* === color === */
+.xg-green {
+    color: green;
+}
+.xg-red {
+    color: red;
+}
+
+.xg-w100 {
+    width: 100px !important;
+}
+.xg-w150 {
+    width: 150px !important;
+}
+.xg-w200 {
+    width: 200px !important;
+}
+
+/* === position === */
+/*
+.xg-left {
+    text-align: left;
+}
+.xg-center {
+    text-align: center;
+}
+.xg-right {
+    text-align: right;
+}
+
+.xg-h10 {
+    height: 10px !important;
+}
+*/
+
+
+@media (min-width:576px) {
+    .xg-sm-hide {
+        display: none !important;
+    }
+}
+
+@media (max-width:768px) {
+    .xg-hide-rwd {
+        display: none !important;
+    }
+}

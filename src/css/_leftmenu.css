@@ -1,0 +1,90 @@
+﻿/* 顏色由外層控制 */
+.xg-leftmenu {
+    padding: 0;
+    margin-left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 1000;
+    /*
+    min-width: 250px;
+    max-width: 300px;
+    font-size: 14px;
+    margin: 0;
+    background: #FFFFFF;
+    */
+}
+
+.xg-leftmenu.xg-off {
+    transition: 0.5s;
+    margin-left: -250px;
+}
+
+    /* menu item */
+    .xg-leftmenu li {
+        line-height: 42px;
+    }
+
+    /* 文字 */
+    .xg-leftmenu a {
+        display: block; /* for 選取 wight 100% */
+        text-decoration: none !important;
+        padding-left: 18px;
+    }
+
+    .xg-leftmenu a:hover {
+        cursor: pointer;
+        text-decoration: none; /* remove underline */
+    }
+
+.xg-leftmenu a:hover i {
+}
+
+/* icon */
+.xg-leftmenu i {
+    /*margin-right: 10px;
+    padding-left: 12px;*/
+    width: 25px;    /* 讓文字對齊 */
+}
+
+.xg-leftmenu .xg-arrow:before {
+    float: right;
+    margin-right: 20px;
+    font-family: 'icomoon';
+    content: "\f107"; /* down arrow */
+    font-size: 13px;    /* 控制大小 */
+}
+
+.xg-leftmenu .xg-arrow.xg-on:before {
+    content: "\f106";   /* up arrow */
+}
+
+/* === 子功能表 === */
+.xg-leftmenu-sub {
+    padding: 0;
+    list-style: none;
+    /*
+    transition: 0.5s;
+    -moz-padding-start: 0;
+    -webkit-padding-start: 0;
+    -khtml-padding-start: 0;
+    -o-padding-start: 0;
+    padding-start: 0;
+    background: #DAF8FF;
+    */
+}
+
+/*
+.xg-leftmenu-sub.collapse {
+    transition: 0.5s;
+}
+*/
+
+.xg-leftmenu-sub li {
+    border: none;
+}
+
+/* sub menu text */
+.xg-leftmenu-sub a {
+    padding-left: 18px;
+}

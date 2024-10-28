@@ -1,0 +1,33 @@
+{
+  "name": "base_sve",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@tsconfig/svelte": "^5.0.2",
+    "@types/crypto-js": "^4.2.1",
+    "svelte": "^4.2.3",
+    "svelte-check": "^3.6.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@carbon/charts-svelte": "^1.13.15",
+    "@types/node": "^20.10.4",
+    "axios": "^1.6.2",
+    "chart.js": "^4.4.1",
+    "crypto-js": "^4.2.0",
+    "moment": "^2.29.4",
+    "path": "^0.12.7",
+    "svelte-spa-router": "^3.3.0",
+    "svelty-picker": "^5.2.0"
+  }
+}

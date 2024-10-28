@@ -1,0 +1,91 @@
+﻿
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* === btn === */
+.btn {
+    padding: 4px 8px;
+    margin-right: 3px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 4px;
+    /*color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;*/
+}
+
+/* table button with link style */
+.btn-link {
+    padding: 0 !important;
+    text-decoration: none !important;
+}
+
+.table-condensed {
+    font-size: 14px;
+}
+
+/* change height, 38 -> 36 */
+.form-control, select.form-control {
+    /*font-size: 16px !important;*/
+    height: 36px !important;
+    /*padding: 3px 6px !important;*/
+}
+
+    /*
+    .form-control:disabled, .form-control[readonly], .form-select:disabled, .form-select[readonly] {
+        background: #eee !important;
+    }
+    */
+
+    /* 移除 tail error icon */
+    .form-control.is-invalid {
+        background-image: none !important;
+    }
+    /* 移除 tail error icon but keep arrow */
+    .form-select.is-invalid {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;        
+    }
+
+textarea.form-control {
+    height: auto !important;
+}
+
+/* modal */
+/* background-color 會覆蓋 border-radius 效果 */
+/*
+.modal-header {
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #eee; 
+}
+*/
+
+/* === placeholder color === */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    /*color: lightgrey !important;*/
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgrey !important;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgrey !important;
+}
+
+/* fix bootstrap 5 */
+.table > :not(:first-child) {
+    border-top: none !important;
+}
+
+.input-group > .form-control,
+.input-group > .form-select {
+    width: 100% !important;    
+}
+
+.modal{
+    display:block;
+}

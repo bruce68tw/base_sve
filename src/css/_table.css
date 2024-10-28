@@ -1,0 +1,182 @@
+﻿/* xg-table, 縮寫 xgt- */ 
+
+/* for file url */
+.xgt-edit td {
+    border-top: none;
+    border-bottom: none;
+}
+
+/* include: read, edit table */
+.xg-table {
+    border-collapse: separate !important;
+    width: 100% !important;
+    border-width: 1px 0 0 1px !important;
+    border-style: solid !important;
+    /*margin-top: 0 !important;*/
+}
+
+    .xg-table th, .xg-table td {
+        font-weight: normal !important;
+        border-width: 0 1px 1px 0 !important;
+        border-style: solid !important;
+        vertical-align: middle !important;
+        text-align: center !important;
+        padding: 0.75rem; /* front web */
+    }
+
+    .xg-table th {
+        padding-right: 12px !important; /*排序icon造成文字左移*/
+    }
+
+    /*
+    .xg-table tr:hover {
+        background: #F6F6F6;
+    }
+    */
+    
+    .xg-table.xgt-no-hline {
+        border-width: 1px 0 1px 1px !important;
+    }
+
+        .xg-table.xgt-no-hline td {
+            border-width: 0 1px 0 0 !important;
+        }
+
+    .xg-table .xi-check > span {
+        top: -15px !important;
+        left: 8px !important;
+    }
+
+/*
+.xg-table th .xi-check {
+    top: -6px !important;
+    left: -3px !important;
+}
+.xg-table tbody .xi-check {
+    top: -8px !important;
+}
+*/
+
+/* table v scroll */
+.xgt-vscroll {
+    border-width: 1px 0 1px 1px !important;
+}
+
+.xgt-vscroll tbody {
+    display: block;
+    overflow-y: scroll;
+}
+
+.xgt-vscroll tr {
+  display:flex;
+}
+
+.xg-table tr input {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+.xg-table tr select {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
+
+/* tr 必須設定 tabindex="0" focus才有效 
+.xgt-focus tbody tr:focus {
+    background: gray;
+}
+*/
+
+@media (max-width:768px) {
+    .xg-table.xg-rwd {
+        background: #fff;
+        overflow: hidden;
+        border: none !important;
+    }
+
+        /*
+        .xg-table tr:nth-of-type(2n) {
+            background: #eee;
+        }
+        .xg-table th, .xg-table td {
+            margin: 0.5em 1em;
+        }
+
+    .xg-table {
+        min-width: 100%;
+    }
+        */
+
+    .xg-table2 tbody {
+        padding-top: 3px;
+    }
+
+        .xg-table.xg-rwd th {
+            display: none;
+        }
+
+        .xg-table.xg-rwd td {
+            text-align: left !important;
+            display: block;
+            border: none !important;
+            padding: 5px !important;
+        }
+
+            /* tr 無法劃線, 必須使用 td */
+            .xg-table.xg-rwd td:first-child {
+                padding-top: 10px !important;
+                border-top: 1px solid lightgray !important;
+            }
+            .xg-table.xg-rwd td:last-child {
+                padding-bottom: 10px !important;
+            }
+
+            .xg-table.xg-rwd td:before {
+                content: attr(data-th);
+                font-weight: bold;
+                /*width: 6.5em;*/
+                display: inline-block;
+                /*color: darkblue;*/
+                text-align: left !important;
+            }
+
+        /*
+        .xg-table th, .xg-table td {
+            text-align: left;
+        }
+
+            .xg-table th, .xg-table td:before {
+                color: #D20B2A;
+                font-weight: bold;
+            }
+        */
+}
+
+/* RWD table 
+table, th, td
+  border: 1px solid #aaa
+  border-collapse: collapse
+  padding: 3px 5px
+  
+table
+  width: 95%
+  margin: 1em auto
+th
+  background: #e6f9ff
+tr:nth-child(even)
+  background: rgba(#6cffd1,.2)
+  
+@media only screen and (max-width:768px)
+  thead
+    display: none
+  td
+    display: block
+    padding: .3rem .5rem
+  td:before
+    content: attr(data-title)
+    display: inline-block
+    width: auto
+    min-width: 20%
+    font-weight: 900
+    padding-right: 1rem
+*/    
+    

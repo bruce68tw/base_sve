@@ -1,0 +1,28 @@
+﻿/* xg-modal, 縮寫 xgm- */
+
+/* edit modal */
+.xg-modal .modal-header {
+    padding: 12px;
+    border-bottom: none;
+    /*background: #f8f9fa;*/
+}
+
+.xg-modal .modal-title {
+    /*font-size: 16px;*/
+}
+
+.xg-modal .modal-body {
+    /* padding 寫成一行會出現水平捲軸 ?? */
+    /* padding: 10px 0 20px 0; */
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.xg-modal .modal-footer {
+    /*margin-top: 20px;*/
+    border-top: none;
+}
+
+.xg-modal .btn-close {
+    font-size: 12px;
+}

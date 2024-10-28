@@ -1,0 +1,119 @@
+﻿
+/**
+ * checkbox, radio, use pure css, no js
+ * span: border, after: checked sign
+ */
+.xi-check {
+    display: inline-block;
+    position: relative;
+    margin-top: 8px;
+    padding: 0 10px 0 25px; /* for label pos */
+}
+    /*
+    .xi-check.xg-in-dt, .xg-radio.xg-in-dt {
+        margin-top: 10px;
+        padding-left: 25px;
+    }
+    */
+
+/* hide original input element */
+.xi-check > input {
+    display: none;
+}
+
+/* span: square/round checked sign */
+.xi-check > span {	
+	cursor: pointer;
+    position: absolute;
+	padding: 0;
+    top: 0;
+    left: 0;
+
+    content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 19px;
+	height: 19px;
+	margin-right: 0px;
+}
+
+    /* for datatable checkbox, no label */
+    .xi-check.xg-no-label > span {
+        top: -6px !important;
+        left: 0 !important;
+    }
+
+/* radio sign box */
+.xi-rspan {
+    border-radius: 50% !important;
+}
+
+/*
+.xi-check.xd-center, .xg-radio.xd-center {	
+    padding:0;
+}
+*/
+
+/* 在 datatable裡面有時會置中 
+.xi-check.xd-center > span, .xg-radio.xd-center > span {	
+	cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    padding:0;
+    margin:0;
+}
+*/
+
+    /* checkbox方框 style (span:before) 
+.xi-check > span:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 19px;
+	height: 19px;
+	background: white;
+    border: 1px solid #ccc;
+	margin-right: 0px;
+}
+*/
+
+/* span after: checked sign */
+.xi-check > input:checked + .xi-cspan:after {
+	content: '';
+	position: absolute;
+    height: 13px;
+    width: 7px;
+    border-width: 0 2px 2px 0; /* 設定checked sign 寬度 */
+	transform: rotate(45deg);
+	top: 0px;
+	left: 5px;
+}
+
+.xi-check > input:checked + .xi-rspan:after {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+}   
+
+/* disabled style */
+.xi-check > input:disabled + span {
+    cursor: auto;
+}
+
+
+/* re-check ?? */
+/* datatable header delete all checkbox */
+.xi-check.xg-delete-all {
+    padding-left: 15px;
+}
+
+/* re-check ?? */
+.xg-delete-all-btn {
+    margin-top: -2px;
+    padding: 2px 3px 2px 0;
+    background: red;
+}
